@@ -13,6 +13,7 @@ int main(void){
 			if(X * A[k] == Y * A[x]){
 				printf("(%d,%d)\n",A[x],A[k]);
 		}
+    	}
     }
 	return 0;
 }
