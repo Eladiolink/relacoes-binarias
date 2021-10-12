@@ -1,16 +1,16 @@
 #include "relations.h"
 #include <stdio.h>
 
-void classeDeEquivalencia(int X, int Y){
-int A[4] = {1, 2, 3, 4}, k;
+void classeDeEquivalencia(int *parOrdenado){
+    int A[4] = {1, 2, 3, 4}, k;
 
     for(int x = 0; x < 4; x++){
 
     	for(k = 0; k < 4; k++){
 
-			if(X * A[k] == Y * A[x]){
-				printf("(%d,%d)\n",A[x],A[k]);
-		}
+			if(parOrdenado[0] * A[k] == parOrdenado[1] * A[x]){
+				printf("(%d,%d)\n", A[x], A[k]);
+		    }
     	}
     }
 
@@ -21,6 +21,7 @@ void mesmaClasseDeEquivalencia(int *primeiroParOrdenado, int *segundoParOrdenado
 
     if( primeiroParOrdenado[0] * segundoParOrdenado[1] == primeiroParOrdenado[1] * segundoParOrdenado[0] ){
         printf("true\n");
+    
     }else{
         printf("false\n");
     }
@@ -49,7 +50,9 @@ void espacoQuociente(void){
         }
 
         for(k = 0 ; k<16 ; k++){
+
 			if(AA[i][0] * AA[k][1] == AA[i][1] * AA[k][0] && AA[k][2] == 1){
+
 				if(vezes == 1){
                     printf(" (%d,%d) ", AA[k][0], AA[k][1]);
                     vezes++;
@@ -63,6 +66,7 @@ void espacoQuociente(void){
         if(aux == 1){
             printf("},");
             printf("\n");
+            
             aux = 0;
             vezes = 1;
         }
