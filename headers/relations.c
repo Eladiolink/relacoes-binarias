@@ -3,7 +3,7 @@
 
 void classeDeEquivalencia(int *parOrdenado){
     int A[4] = {1, 2, 3, 4}, k;
-
+    printf("Classe de Equivalencia de (%i,%i): \n", parOrdenado[0], parOrdenado[1]);
     for(int x = 0; x < 4; x++){
 
     	for(k = 0; k < 4; k++){
@@ -17,13 +17,45 @@ void classeDeEquivalencia(int *parOrdenado){
 	printf("\n\n");
 }
 
+int * umaClasseDeEquivalencia(int parOdenado[][2], int tamanho){
+    
+    printf("São uma classe de equivalencia? \n");
+    int class[tamanho];
+
+    for (int a = 0; a < tamanho; a++){
+        int classe = 0;
+        for (int b = 0; b < tamanho; b++){
+            if (parOdenado[a][0] * parOdenado[b][1] != parOdenado[b][0] * parOdenado[a][1]){
+                classe = 1;
+            }
+        }
+
+        if (classe == 0){
+            class[a] = 1;
+        }
+        else{
+            class[a] = 0;
+        }  
+    }
+
+    for(int a=0;a<tamanho;a++){
+        if(class[a]==0){
+        printf("False\n");
+        return 0;
+        }
+    }
+        printf("True\n");
+}
+
 void mesmaClasseDeEquivalencia(int *primeiroParOrdenado, int *segundoParOrdenado){
+    
+    printf("(%i, %i) e (%i, %i) pertencem a mesma classe de equivalencia? \n", primeiroParOrdenado[0],primeiroParOrdenado[1],segundoParOrdenado[0],segundoParOrdenado[1]);
 
     if( primeiroParOrdenado[0] * segundoParOrdenado[1] == primeiroParOrdenado[1] * segundoParOrdenado[0] ){
-        printf("true\n");
+        printf("True\n");
     
     }else{
-        printf("false\n");
+        printf("False\n");
     }
 }
 
