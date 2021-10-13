@@ -10,8 +10,10 @@ typedef struct
 } par;
 
 int main(void){
+    
+    int c[2] = {4,2};
 
-    classeDeEquivalencia(4,2);
+    classeDeEquivalencia(c);
 
     //mesmaClasseDeEquivalencia(a, b);
 

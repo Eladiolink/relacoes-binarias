@@ -2,7 +2,7 @@
 
 #define RELATIONS_H
 
-void classeDeEquivalencia(int X, int Y);
+void classeDeEquivalencia(int *parOrdenado);
 
 void mesmaClasseDeEquivalencia(int *primeiroParOrdenado, int *segundoParOrdenado);
 
