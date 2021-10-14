@@ -19,7 +19,7 @@ void classeDeEquivalencia(int *parOrdenado){
 
 int * umaClasseDeEquivalencia(int parOdenado[][2], int tamanho){
     
-    printf("São uma classe de equivalencia? \n");
+    printf("Sao uma classe de equivalencia? \n");
     int class[tamanho];
 
     for (int a = 0; a < tamanho; a++){
