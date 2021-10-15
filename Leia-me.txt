@@ -1,0 +1,38 @@
+# Primeiros passos
+As funções podem ser chamadas no arquivo main.c ou no qual desejar, sendo que seja incluida a biblioteca "headers/relations.h".
+É altamente indicado antes de tudo compilar a biblioteca na pasta "headers" com a flag "-c" para gerar tal binario atualizado.
+Na hora de execultar o código sempre lembrar de linkar a biblioteca, poderá ser feito da seguinte forma:
+
+gcc .\headers\relations.o .\main.c
+
+Com todos desses passos básicos em mente, bom proveito ;)
+
+# As funcionalidades foram divididas com nomes nas quais se a semelhavam a seu aproposito, a seguir será passada breves 
+instruções de como usa-las.
+
+1 ° Funcionalidade 
+
+Nome da Função: classeDeEquivalencia(int *par)
+Descrição: Essa função espera receber por parametro um par ordenado em forma de vetor do tipo inteiro,
+e imprime a classe de equivalencia desse par ordenado
+
+2° Funcionalidade
+
+Nome da Função: umaClasseDeEquivalencia(int par[n][2], int tamanho)
+
+Descrição: Essa função espera receber dois parametros, o primeiro uma vetor de pares duas dimensões tal que seja : {{4,2}, {1,2}}
+e o segundo parametro é a quantidade de pares nesse vetor. Seu retorno é true para caso verdadeiro, e false para falso.
+
+
+3° Funcionalidade
+
+Nome da Função: mesmaClasseDeEquivalencia(int *primeiroParOrdenado, int *segundoParOrdenado)
+
+Descrição: Essa função espera dois pares ordenados como vetor e devolve true para caso sejam da mesma classe de equivalencia
+ou false para caso negativo.
+
+4° Funcionalidade
+
+Nome da Função: espacoQuociente(void)
+
+Descrição: Essa função não receber nenhum parametro, mas será impresso na tela o espaço quociente de AxA na relação R
